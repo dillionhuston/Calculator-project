@@ -41,37 +41,30 @@ void menu::show()
 
  void getoption(int option)
 {
-
-	
-	 system("color a");
-	if (bIsinMenu == true) { 
+	std::cin >> option;
 
 
-		std::cin >> option;
-
-		while (bIsinMenu == true) {
-			if (option == 1) {
-				Add.add();
-			}
-			else if (option == 2) {
-				mulitplication.mutiply();
-			}
-			else if (option == 3) {
-				division.Divide();
-			}
-			else if (option == 4) {
-				subtraction.Subtract();
-			}break;
-		}
-	}
-	else(option >= 5);
-
+	switch (option)
 	{
-		
-		system("color a");
-		std::cout << "error";
-	};
-};
+	case'1':
+		Add.add();
+
+	case'2':
+		mulitplication.mutiply();
+
+	case'3':
+		division.Divide();
+
+	case'4':
+		subtraction.Subtract();
+
+	default:
+		std::cout << "ERROR, wrong selection";
+		break;
+
+	}
+
+}
 
 void Addition::add()
 {
